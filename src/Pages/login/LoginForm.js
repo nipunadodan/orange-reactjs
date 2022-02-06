@@ -36,14 +36,14 @@ class LoginForm extends Component{
             .then(
                 (result) => {
                     if(result.status === 'success') {
-                        localStorage.setItem('archives_login', true)
-                        localStorage.setItem('archives_user', JSON.stringify(result.user))
+                        localStorage.setItem('orange_login', true)
+                        localStorage.setItem('orange_user', JSON.stringify(result.user))
 
                         this.setState({
                             login:true
                         })
                     }else{
-                        localStorage.setItem('archives_login', false)
+                        localStorage.setItem('orange_login', false)
                         this.setState({
                             login:false
                         })
@@ -71,7 +71,7 @@ class LoginForm extends Component{
             <>
                 <div className="wlogin-wrapper bg-white rounded-2xl px-8 md:px-16 pt-14 mt-6">
                     <h1 className={'font-black text-3xl text-center mb-6 flex items-end justify-center items-center'}>
-                        <img src={'/images/logo.svg'} style={{width: 70}} className={'inline'} alt={'Ventura Logo'} />
+                        <img src={'/images/logo.svg'} style={{width: 70}} className={'inline'} alt={'Orange Logo'} />
                         Login
                     </h1>
                     <p className={'text-center text-sm mb-8 text-gray-800'}>Don't have an account? <Link className={'font-bold hover:text-black'} to={'/register'}>Register</Link></p>
@@ -79,14 +79,14 @@ class LoginForm extends Component{
                         <div className={'my-3'}>
                             <label className={'text-sm mb-1 inline-block'}>Username</label>
                             <input type="text"
-                                   className={'p-2 rounded-lg w-full border-2 focus:border-archives hover:border-gray-400 outline-none'}
+                                   className={'p-2 rounded-lg w-full border-2 focus:border-orange hover:border-gray-400 outline-none'}
                                    placeholder={'Username'} name={'username'} onChange={this.handleChange}
                                    autoComplete={'off'} />
                         </div>
                         <div className={'my-3'}>
                             <label className={'text-sm mb-1 inline-block'}>Password</label>
                             <input type="password"
-                                   className={'p-2 rounded-lg w-full border-2 focus:border-archives hover:border-gray-400 outline-none'}
+                                   className={'p-2 rounded-lg w-full border-2 focus:border-orange hover:border-gray-400 outline-none'}
                                    placeholder={'Password'} name={'password'} onChange={this.handleChange} />
                         </div>
                         <div className={'flex justify-end mt-6'}>

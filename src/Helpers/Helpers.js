@@ -10,7 +10,7 @@ export function withRouter( Child ) {
 }
 
 export function useAuth(props) {
-    const user = JSON.parse(localStorage.getItem('ventura_user'))
+    const user = JSON.parse(localStorage.getItem('orange_user'))
     if(user)
         return props.roles.includes(user.role) || props.minlevel <= user.level
     else
@@ -18,7 +18,7 @@ export function useAuth(props) {
 }
 
 export function isLoggedIn() {
-    const login = localStorage.getItem('archives_login');
+    const login = localStorage.getItem('orange_login');
     return !!login;
 }
 
