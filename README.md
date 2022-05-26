@@ -1,4 +1,4 @@
-# Getting Started
+# React.js Boilerplate with Tailwind and React Router DOM
 
 This project was bootstrapped with [Create React App PWA](https://create-react-app.dev/docs/making-a-progressive-web-app/).
 
@@ -21,18 +21,19 @@ There are several readily available libraries, components and functions out of t
 ```json
 {
   "dependancies" : {
-    "react-router-dom": "^6.2.1"
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.6",
-    "tailwindcss": "^3.0.18",
-    "dotenv": "^16.0.0"
+    "autoprefixer": "^10.4.7",
+    "dotenv-cli": "^5.1.0",
+    "postcss": "^8.4.14",
+    "sass": "^1.52.1",
+    "tailwindcss": "^3.0.24"
   },
   "scripts": {
-    "build:test": "dotenv -e .env.dev craco build && rm -rf build-test && cp -r build build-test",
-    "build:prod": "dotenv -e .env.production craco build",
-    "build": "echo \"Please use build:dev or build:prod \" && exit 1"
+    "build:test": "dotenv -e .env.dev react-scripts build && rm -rf build-test && cp -r build build-test",
+    "build:prod": "dotenv -e .env.production react-scripts build",
+    "build": "echo \"Please use build:dev or build:prod \" && exit 1",
   }
 }
 ```
