@@ -20,7 +20,7 @@ There are several readily available libraries, components and functions out of t
 
 ```json
 {
-  "dependancies" : {
+  "dependencies" : {
     "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
@@ -33,7 +33,7 @@ There are several readily available libraries, components and functions out of t
   "scripts": {
     "build:test": "dotenv -e .env.dev react-scripts build && rm -rf build-test && cp -r build build-test",
     "build:prod": "dotenv -e .env.production react-scripts build",
-    "build": "echo \"Please use build:dev or build:prod \" && exit 1",
+    "build": "echo \"Please use build:dev or build:prod \" && exit 1"
   }
 }
 ```
@@ -42,7 +42,11 @@ There are several readily available libraries, components and functions out of t
 
 The `app.js` is working solely as a router. Apart from a several commonly used components in the `Common` and `Pages` folders under `src`, there are some helpers provided to beat commonly rising issues with ReactJS. 
 
+### Access restriction to pages
 `PrivateRoute.js` will provide a solution for authentication while routing. You will have to save authentication details somewhere convenient to you and retrieve them on `useAuth()` instead of retrieving from `localStorage` if you prefer. You can find it under `Helpers.js`.
+
+### Dark Mode Switching 
+`ThemeContext` is included to function as the dark mode switcher. You can use `ThemeToggle` component to toggle the theme.
 
 ### Solving the refreshing problem with .htaccess
 To make sure the App will be routed correctly when refreshed, an .htaccess is introduced to redirect the requests to index.html. **This solution will only work with Apache servers**. For other solutions read [this (stackoverflow)](https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually) or [this (React Docs)](https://create-react-app.dev/docs/deployment/#serving-apps-with-client-side-routing).
